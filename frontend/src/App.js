@@ -19,6 +19,15 @@ function App() {
   const closeAboutPage = ()=>{
     setIsAboutOpen(false);
   }
+
+  const openResultPage = (result)=>{
+    setResult(result);
+    setIsResultOpen(true)
+  }
+  const closeResultPage = ()=>{
+    setResult(null);
+    setIsResultOpen(false);
+  }
   return (
     <>
       <ToastContainer
@@ -30,7 +39,7 @@ function App() {
       <Navbar openAbout={openAboutPage} />
       {!isAboutOpen && !isResultOpen ? (
         <>
-          <MainForm />
+          <MainForm showResult={openResultPage}/>
         </>
       ) : isAboutOpen ? (
         <>
@@ -38,7 +47,7 @@ function App() {
         </>
       ) : (
         <>
-          <Result result={result} />
+          <Result result={result} closeResult = {closeResultPage}/>
         </>
       )}
     </>
