@@ -22,15 +22,21 @@ const Result = (props) => {
       </button>
       <hr />
       
-      <div className=" text-center font-bold mx-6 mt-4 text-3xl fontt-serif ">
+      <div 
+      className={`${ props.result ? "bg_prone" : "bg_not_prone"} bg-no-repeat bg-center h-[500px]  opacity-20 `}
+      >
+      </div>
+      <div
+         className=" mt-[-250px] flex flex-row items-center justify-center font-bold mx-6 mt-4 text-5xl">
       {props.result ? (
-        <span className="text-red-600"> You are prone to Chronic Kidney Disease</span>
+        <span className="text-red-600 "> You are prone to Chronic Kidney Disease</span>
       ): (
         <>
            <span className="text-green-500"> You are not prone to Chronic Kidney Disease</span>
         </>
       )}
       </div>
+      
     </>
     );
   };

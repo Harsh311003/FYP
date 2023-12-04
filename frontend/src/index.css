@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.bg_not_prone{
+  background-image: url('./images//not_prone.jpg');
+}
+.bg_prone{
+  background-image: url('./images/prone.jpg');
+}
